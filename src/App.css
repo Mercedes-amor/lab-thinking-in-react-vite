@@ -7,6 +7,28 @@
   pointer-events: none;
 }
 
+.colorRed {
+  color: red;
+}
+.tableDiv {
+  display: flex;
+  justify-content: center;
+}
+table {
+  text-align: center;
+  width: 600px;
+  border: 2px solid rgb(59, 56, 56);
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: rgb(112, 163, 163);
+}
+
+table td {
+  border: 2px solid rgb(81, 81, 126);
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

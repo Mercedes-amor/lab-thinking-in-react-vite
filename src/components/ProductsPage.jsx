@@ -18,8 +18,8 @@ function ProductsPage() {
         setProductsToRender={setProductsToRender}
         />
       <ProductTable 
-      products={products} 
-      setProducts={setProducts} 
+    //   products={products} 
+    //   setProducts={setProducts} 
       setProductsToRender={setProductsToRender} 
       productsToRender={productsToRender}
       />

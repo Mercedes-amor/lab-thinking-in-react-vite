@@ -1,33 +1,30 @@
 import { useState } from "react";
 
 function ProductRow(props) {
-
-console.log("row", props.productsToRender)
+  console.log("row", props.productsToRender);
   return (
-    <div>
-      {props.productsToRender.map((eachProduct) => {
-        
-        return (
-          <table key={eachProduct.id}>
-            <thead>
+    <div className="tableDiv">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+
+        {props.productsToRender.map((eachProduct) => {
+          return (
+            <tbody key={eachProduct.id}>
               <tr>
-                <th>Name</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                {eachProduct.name}
+                <td className={`${!eachProduct.inStock ? "colorRed" : null}`}>
+                  {eachProduct.name}
                 </td>
-                <td>
-                {eachProduct.price}
-                </td>
+                <td>{eachProduct.price}</td>
               </tr>
             </tbody>
-          </table>
-        );
-      })}
+          );
+        })}
+      </table>
     </div>
   );
 }
